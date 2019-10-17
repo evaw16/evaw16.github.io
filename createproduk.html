@@ -3,42 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quella</title>
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>Create</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body style="background:url('assets/img/xx.png')" width="20%">
-    <script type="text/javascript">
-      $(document).ready(function (e) {
-    $("#inputdata").on('submit',(function(e) {
-            e.preventDefault();
-            $.ajax({
-              url : 'http://localhost/Quellaxx/idp.php',
-              method: "POST",
-              data: new FormData(this),
-              contentType: false,
-              cache: false,
-              processData: false,
-              beforeSend:function(){
-                $("#head").html("Sedang Mengunggah Data");
-              },
-              success:function(result){
-                $("#head").html("Data Berhasil Ditambahkan");
-                 setTimeout(function() {
-                  window.location = "http://localhost/Quellaxx/lihatdp.php"}, 2000);
-                 // location.reload();
-              },
-              error: function(xhr, Status, err) {
-                $("#head").html("Terjadi error : "+Status);
-              }
-            });
-  }));
-    });
-</script>
-  <center><img src="assets/img/1-1.png" width="25%" style="margin-top:20px;"></center>
+<center><img src="assets/img/1-1.png" width="25%" style="margin-top:20px;"></center>
   <br>
   <div class="container">
     <nav class="navbar navbar-inverse">
@@ -57,7 +27,6 @@
               </ul>
             </li>
             <li role="presentation"><a href="transaksi.php">Transaksi</a></li>
-          </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> LOGOUT</a></li>
@@ -68,12 +37,7 @@
 </div>
 <center>
   <div class="register">
-<?php
-if(isset($_SESSION['message'])){
-echo $_SESSION['message'];
-unset($_SESSION['message']);
-}
-?>
+
       <br><div id="head">Input Data Produk</div>
       <br><br>
       <div class="form">
