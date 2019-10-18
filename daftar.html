@@ -30,20 +30,25 @@
           		<input type="button" value="Upload Bukti Legal" onclick="document.getElementById('buktilegal').click()" class="upload" id="buttonupload">
           		<div class="buttonsb">
 					<button type="button" id="batal"><a href="index.html" onclick="alert('Yakin untuk membatalkan?')">Batal</a></button >
-					<button type="button" id="simpan"><a href="index.html">Simpan</a></button>
+					<button type="button" id="simpan">
+						<a href="index.html">Simpan</a>
+					</button>
 				</div>
 				</form>
 				<form id="pembeli" class="input-group">
-				<input type="text" name="Username" placeholder="Username" class="input-field">
+				<input type="text" name="Username" placeholder="Username" class="input-field" required>
           		<input type="email" name="email" placeholder="Email" required="" class="input-field">
           		<input type="password" name="password" placeholder="Password" required="" class="input-field">
-          		<input type="password" name="ulangipassword" placeholder="Ulangi Password" class="input-field">
+          		<input type="password" name="ulangipassword" placeholder="Ulangi Password" class="input-field" required>
           		<input type="text" name="alamat" placeholder="Alamat" required="" class="input-field">
           		<input type="number" name="notelp" placeholder="No Telephone/ HP" required="" class="input-field">
           		<input type="number" name="norek" placeholder="Nomor Rekening" required="" class="input-field">
           		<div class="buttonsb">
           			<button type="button" id="batal"><a href="index.html" onclick="alert('Yakin untuk membatalkan pendaftaran?')">Batal</a></button >
-					<button type="button" id="simpan" onclick="alert('berhasil mendaftar')"><!-- a href="login.html"> -->Simpan<!-- </a> --></button>
+					<button type="submit" id="simpan" onclick="alert('berhasil')">
+						<!-- <a href="login.html">Simpan</a> -->
+						<!-- a href="login.html"> -->Simpan<!-- </a> -->
+					</button>
 				</div>
 				</form>
 		</div>

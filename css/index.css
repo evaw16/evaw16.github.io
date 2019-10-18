@@ -91,7 +91,7 @@ html, body{
 	color: yellow;
 	font-size: 2em;
 	font-family: verdana;
-	margin-bottom: 1em; 
+	margin-bottom: 1em;
 
 }
 #text-gambar a{
@@ -210,7 +210,7 @@ html, body{
 	font-family: verdana;
 	font-weight: bold;
 }
-@media (max-width: 600px) { 
+@media (max-width: 600px) {
 #header #logo a{
 	margin-right: 70px;
 	font-size: 1.8em;
