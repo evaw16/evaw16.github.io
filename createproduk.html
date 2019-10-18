@@ -11,16 +11,19 @@
 
 <body>
     <div class="input">
-        <h2 class="login-admin"> <b> Tambahkan Data Produk </b></h2>
-        <form class="login-isi" method="post">
+        <h2 class="create"> <b> Tambahkan Data Produk </b></h2>
+        <form class="create-isi" method="post">
             <p>
-                <input type="text" name="nama" id="nama" placeholder="Nama">
+                <input type="text" name="nama" id="nama" placeholder="Nama" required>
             </p>
             <p>
-                <input type="number" name="harga" id="price" placeholder="Harga">
+                <input type="number" name="harga" id="price" placeholder="Harga" required>
             </p>
             <p>
-                <input type="text" name="ket" id="ket" placeholder="Keterangan">
+                <input type="text" name="ket" id="ket" placeholder="Keterangan" required>
+            </p>
+            <p>
+                <input type="submit" value="Masukkan" id="submit" onclick="validasi()"><br>
             </p>
             <p>
                 <a href="index.html">Back To Home</a>
