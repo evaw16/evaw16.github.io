@@ -7,6 +7,34 @@ html, body{
 	position: absolute;
 	/*background-color: #D3D3D3;*/
 }
+#buttonbayar {
+	padding: 10px 20px;
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	font-style: verdana;
+	font-size: 20px;
+	border-radius: 10px/10px;
+}
+#buttonbatal {
+	padding: 10px 20px;
+	background-color: maroon;
+	color: white;
+	text-decoration: none;
+	font-style: verdana;
+	font-size: 20px;
+	border-radius: 10px/10px;
+}
+#keranjang{
+	float: left;
+	margin-left: 550px;
+}
+#buttonbayar:hover{
+	background-color: navy;
+}
+#buttonbatal:hover{
+	background-color: red;
+}
 .badan
 {
     /*width: 100%;*//*
@@ -17,10 +45,10 @@ html, body{
     position: absolute;
   	top: 35%;
   	/*bottom: 70%;*/
-	  
+
 
 }
- 
+
 /*.badan h2
 {
     color: crimson;
@@ -28,7 +56,7 @@ html, body{
     margin: 5px;
     margin-bottom: 13px;
 }*/
- 
+
 .list-produk
 {
     border: 1px solid gainsboro;
@@ -40,13 +68,13 @@ html, body{
     border-radius: 10px/10px;
     text-align: center;
 }
- 
+
 .list-produk:hover
 {
     transition-duration: 700ms;
     box-shadow: 5px 5px gainsboro;
 }
- 
+
 .list-produk img
 {
     width: 100%;
@@ -55,14 +83,14 @@ html, body{
     margin-bottom: 5px;
     border-radius: 10px/10px;
 }
- 
+
 .list-produk h4, .list-produk h5
 {
     color: crimson;
     text-align: center;
     margin-bottom: 5px;
 }
- 
+
 .tombol
 {
     text-decoration: none;
@@ -75,18 +103,18 @@ html, body{
     text-align: center;
     color: white;
 }
- 
+
 .tombol:hover
 {
     background-color: black;
     transition-duration: 700ms;
 }
- 
+
 .tombol-detail
 {
     background-color: green;
 }
- 
+
 .tombol-beli
 {
     background-color: crimson;
@@ -175,7 +203,7 @@ html, body{
 	font-family: verdana;
 	position: relative;
 	top: -100px;
-	
+
 }
 #text-gambar a{
 	text-decoration:none;
@@ -205,9 +233,9 @@ html, body{
 }
 .sub-header ul li{
     float: left;
-   
+
     display: block;
- 
+
 }
 .sub-header li a{
     padding: 20px 10px;
@@ -220,9 +248,7 @@ html, body{
  }
  .sub-header a:hover{
     background-color: #3B3024;
-   
 
-  
  }
 #footer{
 	height: 15%;
@@ -236,7 +262,7 @@ html, body{
 	font-family: verdana;
 	font-weight: bold;
 }
-@media (max-width: 600px) { 
+@media (max-width: 600px) {
 #header #logo a{
 	margin-right: 70px;
 	font-size: 1.8em;
@@ -246,6 +272,9 @@ html, body{
 	padding: 5px 20px;
 	font-size: 15px;
 	font-weight: bold;
+}
+.active{
+	color:black;
 }
 #text-gambar b{
 	font-size: 2em;

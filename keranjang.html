@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>Keranjang</title>
+	<link rel="stylesheet" type="text/css" href="css/customer.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+	</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div class="sub-header">
+                <ul>
+                    <li><a href="#" class="active">Beranda</a></li>
+                    <li><a href="order.html">Pemesanan</a></li>
+                    <li><a href="keranjang.html">Keranjang</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                </ul>
+            </div>
+			<div>
+				<ul class="menu">
+					<li><a href="index.html" onclick="alert('Yakin untuk keluar?')">Logout</a></li>
+				</ul>
+			</div>
+<div id="content">
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 85%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<br><br><br><br><br>
+<table>
+  <tr>
+    <th>Nama Produk</th>
+    <th>Harga</th>
+    <th>Jumlah</th>
+  </tr>
+  <tr>
+    <td>Lemari Klasik</td>
+    <td>Rp. 2.300.000</td>
+    <td>1</td>
+  </tr>
+</table>
+<br>
+<div id="keranjang">
+	<a href="customer.html" id="buttonbatal" onclick="alert('yakin untuk membatalkan pembayaran?')">Batal</a>
+	<a href="bayar.html" id="buttonbayar">Bayar</a>
+</div>
+
+</body>
+</html>
