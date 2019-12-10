@@ -4,6 +4,7 @@
 	<title>Beranda Meubelku-Jati</title>
 	<link rel="stylesheet" type="text/css" href="css/customer.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/detail.css">
 	<meta charset="UTF-8">
 	<!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
 	</head>
@@ -40,8 +41,8 @@
 
             <h4>Tempat Tidur Minimalis</h4>
             <h5>Rp 1.800.000,-</h5>
-
-            <a class="tombol tombol-detail" href="#">Detail</a>
+<!-- <button id="myBtn">Detail</button> -->
+						<span id="myBtn" class="tombol tombol-detail" href="">Detail</span>
             <a class="tombol tombol-beli" href="#">Beli</a>
         </div>
 
@@ -95,24 +96,77 @@
     </div>
 		</div>
 
+
+		<div id="myModal" class="modal">
+
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <span class="close">&times;</span>
+		    <!-- <p>Some text in the Modal..</p> -->
+				<div id="header">
+					<div class="sub-header">
+		               <h1>Tempat Tidur Minimalis</h1>
+		            </div>
+					<div>
+						<ul class="menu">
+							<li><a href="index.html" onclick="alert('Yakin untuk keluar?')">Logout</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div id="content">
+					<center>
+		            <div class="form-box">
+		                <div class="gambar-produk">
+		                    <img src="img/jati-bed.jpg" style="width:25%">
+		                </div>
+		                <form id="tambah-produk" class="input-group">
+		                 <h1>Rp. 3.800.000,-</h1>
+		                 <h1>Ukuran Medium</h1>
+		                 <h1>Sisa 10 Stok</h1>
+		                <div class="buttonsb">
+		                    <a id="batal" href="customer.html" onclick="alert('Yakin untuk tidak membeli produk ini?')">Kembali</a>
+		                    <a id="simpan" href="">Beli</a>
+		                </div>
+		                </form>
+		        </div>
+					</center>
+				</div>
+		  </div>
+
+		</div>
+
 		<div id="footer">
 			KELOMPOK 22 &copy; 2019
 			ALIFATUR RIGASARI (162410101002) & EVA WATI (162410101024)
 		</div>
 	</div>
+	<script>
+// Get the modal
+var modal = document.getElementById("myModal");
 
-	<!-- <script>
-	// Add active class to the current button (highlight it)
-	var header = document.getElementById("header");
-	var a = header.getElementsByClassName("a");
-	for (var i = 0; i < btns.length; i++) {
-	  a[i].addEventListener("click", function() {
-	  var current = document.getElementsByClassName("active");
-	  current[0].className = current[0].className.replace(" active", "");
-	  this.className += " active";
-	  });
-	}
-	</script> -->
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
 
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>

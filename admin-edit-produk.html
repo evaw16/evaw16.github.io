@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Edit Produk</title>
+	<link rel="stylesheet" type="text/css" href="css/header&footer.css">
+	<link rel="stylesheet" type="text/css" href="css/admin-tambah-produk.css">
+	<link rel="stylesheet" type="text/css" href="css/gambar-atas.css">
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div class="sub-header">
+               <h1>Edit Produk</h1>
+            </div>
+			<div>
+				<ul class="menu">
+					<li><a href="index.html" onclick="alert('Yakin untuk keluar?')">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="content">
+            <div class="form-box">
+                <div class="sosial-icons">
+                    <img src="img/iconcowok.png">
+                </div>
+                <form id="tambah-produk" class="input-group">
+                    <input type="text" name="Nama Produk" placeholder="Nama Produk" required="" class="input-field">
+                    <input type="number" name="Jumlah Stok" placeholder= "Jumlah Stok"  required="" class="input-field">
+                    <input type="number" name="Harga" placeholder="Harga (Rp)" required="" class="input-field">
+                    <input type="file" name="buktilegal" id="buktilegal" style="display: none" onchange="document.getElementById('filename').value=this.value">
+                    <input type="text" id="filename" class="upload">
+                    <input type="button" value="Upload Bukti Legal" onclick="document.getElementById('buktilegal').click()" class="upload" id="buttonupload">
+                <div class="buttonsb">
+                    <a id="batal" href="admin-produk.html" onclick="alert('Yakin untuk membatalkan penambahan produk?')">Batal</a>
+                    <a id="simpan" href="">Simpan</a>
+                </div>
+                </form>
+        </div>
+		</div>
+
+		<div id="footer">
+			&copy; 2019
+			ALIFATUR RIGASARI - EVA WATI
+		</div>
+	</div>
+
+</body>
+</html>
