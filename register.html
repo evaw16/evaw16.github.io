@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<script>
+    function validasi() {
+        var x = document.forms["form-registrasi"]["username"].value;
+        var y = document.forms["form-registrasi"]["password"].value;
+        var z = document.forms["form-registrasi"]["email"].value;
+        var p = document.forms["form-registrasi"]["ulangipassword"].value;
+        if (x == "" && y == "" && z == "") {
+            alert("Data Kosong");
+        } else if (x == "") {
+            alert("Username tidak Boleh Kosong");
+        } else if (y == "") {
+            alert("Password tidak Boleh Kosong");
+        } else if( z == ""){
+            alert("email tidak Boleh Kosong");
+        } else if( z == p){
+            // alert("password harus sama")
+            return true;
+        } else if( y != p){
+            alert("password harus sama")
+            // return true;
+        } 
+        else {
+            alert("Registrasi Berhasil. Silahkan Login!")
+            return true;
+        }
+        return false;
+    }
+</script>
+<head>
+	<title>Register</title>
+	<link rel="stylesheet" type="text/css" href="css/konten.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="js/sliderdftar.js">
+</head>
+<body class="register">
+	<div class="hero">
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" onclick="supplier()">Pemasok</button>
+				<button type="button" class="toggle-btn" onclick="customer()">Pembeli</button>
+			</div>
+				<div class="sosial-icons">
+					<img src="img/iconcowok.png">
+					<img src="img/iconcewek.png">
+				</div>
+				<form id="pemasok" class="input-group" name="form-registrasi" action="../index.html" onsubmit="return validasi()" method="post">
+					<input type="text" name="Username" placeholder="Username" required="" class="input-field">
+          			<input type="email" name="email" placeholder="Email" required="" class="input-field">
+          			<input type="password" name="password" placeholder="Password" required="" class="input-field">
+          			<input type="password" name="ulangipassword" placeholder="Ulangi Password" class="input-field">
+          			<input type="text" name="alamat" placeholder="Alamat" required="" class="input-field">
+          			<input type="number" name="notelp" placeholder="No Telephone/ HP" required="" class="input-field">
+          			<input type="number" name="norek" placeholder="Nomor Rekening" required="" class="input-field">
+					<input type="file" name="buktilegal" id="buktilegal" style="display: none" onchange="document.getElementById('filename').value=this.value">
+          			<input type="text" id="filename" class="upload">
+          			<input type="button" value="Upload Bukti Legal" onclick="document.getElementById('buktilegal').click()" class="upload" id="buttonupload">
+          			<div class="buttonsb">
+						<button type="button" id="batal">
+							<a href="index.html" onclick="alert('Yakin untuk membatalkan?')">
+								Batal
+							</a>
+						</button >
+						<button type="button" id="simpan">
+							<a href="index.html">
+								Simpan
+							</a>
+						</button>
+					</div>
+				</form>
+				<form id="pembeli" class="input-group">
+					<input type="text" name="Username" placeholder="Username" class="input-field">
+          			<input type="email" name="email" placeholder="Email" required="" class="input-field">
+          			<input type="password" name="password" placeholder="Password" required="" class="input-field">
+          			<input type="password" name="ulangipassword" placeholder="Ulangi Password" class="input-field">
+          			<input type="text" name="alamat" placeholder="Alamat" required="" class="input-field">
+          			<input type="number" name="notelp" placeholder="No Telephone/ HP" required="" class="input-field">
+          			<input type="number" name="norek" placeholder="Nomor Rekening" required="" class="input-field">
+          			<div class="buttonsb">
+          				<button type="button" id="batal">
+          					<a href="index.html" onclick="alert('Yakin untuk membatalkan pendaftaran?')">
+          						Batal
+          					</a>
+          				</button >
+						<button type="button" id="simpan" onclick="alert('berhasil mendaftar')"><!-- a href="login.html"> -->Simpan<!-- </a> -->
+						</button>
+					</div>
+				</form>
+		</div>
+	</div>
+
+	<script>
+		var x = document.getElementById("pemasok");
+		var y = document.getElementById("pembeli");
+		var z = document.getElementById("btn");
+
+		function customer() {
+			x.style.left = "-400px";
+			y.style.left = "25px";
+			z.style.left = "110px";
+		}
+		function supplier() {
+			x.style.left = "25px";
+			y.style.left = "450px";
+			z.style.left = "0px";
+		}
+	</script>
+</body>
+</html>

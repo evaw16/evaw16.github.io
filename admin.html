@@ -2,90 +2,238 @@
 <html>
 <head>
 	<title>Beranda Admin</title>
-	<link rel="stylesheet" type="text/css" href="css/header&footer.css">
-	<link rel="stylesheet" type="text/css" href="css/admin.css">
-	<link rel="stylesheet" type="text/css" href="css/gambar-atas.css">
+	<link rel="stylesheet" type="text/css" href="css/footer&header.css">
+	<link rel="stylesheet" type="text/css" href="css/konten.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="e-search.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<div id="container">
-		<div id="header">
-			<div class="sub-header">
-                <ul>
-                    <li><a href="admin.html">Beranda</a></li>
-                    <li><a href="admin-produk.html">Produk</a></li>
-                    <li><a href="admin-pemesanan.html">Pemesanan</a></li>
-                    <li><a href="admin-k&s.html">Kritik & Saran</a></li>
-                </ul>
-            </div>
-			<div>
-				<ul class="menu">
-					<li><a href="index.html" onclick="alert('Yakin untuk keluar?')">Logout</a></li>
-				</ul>
-			</div>
-		</div>
+<div id="container">
+    <div id="header">
+        <div class="sub-header">
+            <ul>
+                <li class="active">
+                    <a href="admin.html">
+                        Beranda
+                    </a>
+                </li>
+                <li>
+                    <a href="admin-produk.html">
+                        Produk
+                    </a>
+                </li>
+                <li>
+                    <a href="admin-pemesanan.html">
+                        Pemesanan
+                    </a>
+                </li>
+                <li>
+                    <a href="admin-profil.html">
+                        Profil
+                    </a>
+                </li>
+                <li>
+                    <a href="admin-k&s.html">
+                        Kritik & Saran
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <ul class="menu">
+            <li>
+                <a href="index.html" onclick="alert('Yakin untuk keluar?')">
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="content">
+        <div id="gambar-atas">
+        <img src="img/kayu.jpg">
+            <p>Pilih Kayu Terbaikmu</p>
+        </div>
+        <div class="cari">
+            <h1>Cari Kayu Sesuai Keinginanmu</h1>
+            <p>Ketik dibawah ini untuk mencari:</p>
+            <input type="text" class="search-game" placeholder="Ketik disini untuk mencari">
+        </div>
+         <div id="pagination">
+            <a href="" class="page">first</a>
+            <a href="" class="page">2</a>
+            <a href="" class="page">3</a>
+            <a href="" class="page">4</a>
+            <a href=""class="page">5</a>
+            <a href=""class="page">last</a>
+          </div>
+        <div class="containerItems">
+          <div data-search="tempat tidur minimalis" class="list-produk">
+            <img src="img/kayu-jati.jpg" alt="Jati Panjang">
+                <h4>Jati Panjang 1m</h4>
+                <h5>Rp 150.000,-</h5>
+                <h5>Tersedia 10 Stok</h5>
+            <span id="MyBtn" class="tombol tombol-detail" href="">Detail</span>
+            <span id="Btn" class="tombol tombol-beli" href="">Beli</span>
+        
+         </div>  
+         <div data-search="lemari susun" class="list-produk">
+                <img src="img/kayu-jati.jpeg" alt="Jati Panjang">
+                <h4>Jati Panjang 2m</h4>
+                <h5>Rp 230.000,-</h5>
+                <h5>Tersedia 10 Stok</h5>
+                <a class="tombol tombol-detail" href="#">Detail
+                </a> 
+                <a class="tombol tombol-beli" href="#">
+                Beli
+                </a>
+              </div>
+              <div data-search="lemari klasik" class="list-produk">
+                <img src="img/kayu-jati.png" alt="Jati Panjang">
+                <h4>Jati Gelondongan 0.3m</h4>
+                <h5>Rp 350.000,-</h5>
+                <h5>Tersedia 10 Stok</h5>
+                <a class="tombol tombol-detail" href="#">
+                  Detail
+                </a> 
+                <a class="tombol tombol-beli" href="#">
+                Beli
+                </a>
+              </div>
+              <div data-search="meja kursi pendek" class="list-produk">
+                <img src="img/kayu-jati2.jpg" alt="Jati Panjang">
+                <h4>Jati Ampelas 1 x 3 m</h4>
+                <h5>Rp 350.000,-</h5>
+                <h5>Tersedia 10 Stok</h5>
+                <a class="tombol tombol-detail" href="#">
+                  Detail
+                </a> 
+                <a class="tombol tombol-beli" href="#">
+                  Beli
+                </a>
+              </div>
+              <div data-search="meja kursi medium" class="list-produk">
+                <img src="img/kayu-jati3.png" alt="Jati Panjang">
+                <h4>Jati Gelondongan Potong 4m</h4>
+                <h5>Rp 450.000,-</h5>
+                <h5>Tersedia 10 Stok</h5>
+                <a class="tombol tombol-detail" href="#">
+                  Detail
+                </a> 
+                <a class="tombol tombol-beli" href="#">
+                  Beli
+                </a>
+               </div>
+              <div data-search="meja kursi tinggi" class="list-produk">
+                <img src="img/JATI 2.jpg" alt="Jati Panjang">
+                <h4>Jati Gelondongn 0.2m</h4>
+                <h5>Rp 170.000,-</h5>
+                <h5>Tersedia 10 Stok</h5>
+                <a id="button" class="tombol tombol-detail" href="#">Detail</a> 
+                <a class="tombol tombol-beli" href="#">Beli</a>
+              </div> 
+        </div>
 
-		<div id="content">
-			<div id="gambar-atas">
-				<h1> haha </h1>
-			</div>
-			<div class="badan">
-        		<div class="list-produk">
-            		<img src="img/kayu-jati.jpg" alt="Jati Panjang">
-            		<h4>Jati Panjang 1m</h4>
-            		<h5>Rp 150.000,-</h5>
-            		<h5>Tersedia 10 Stok</h5>
-            		<a class="tombol tombol-detail" href="#">Detail</a> 
-            		<a class="tombol tombol-beli" href="#">Beli</a>
-        		</div>
-        		<div class="list-produk">
-            		<img src="img/kayu-jati.jpeg" alt="Jati Panjang">
-            		<h4>Jati Panjang 2m</h4>
-            		<h5>Rp 230.000,-</h5>
-            		<h5>Tersedia 10 Stok</h5>
-            		<a class="tombol tombol-detail" href="#">Detail</a> 
-            		<a class="tombol tombol-beli" href="#">Beli</a>
-        		</div>
-        		<div class="list-produk">
-            		<img src="img/kayu-jati.png" alt="Jati Panjang">
-            		<h4>Jati Gelondongan 0.3m</h4>
-            		<h5>Rp 350.000,-</h5>
-            		<h5>Tersedia 10 Stok</h5>
-            		<a class="tombol tombol-detail" href="#">Detail</a> 
-            		<a class="tombol tombol-beli" href="#">Beli</a>
-        		</div>
-        		<div class="list-produk">
-            		<img src="img/kayu-jati2.jpg" alt="Jati Panjang">
-            		<h4>Jati Ampelas 1 x 3 m</h4>
-            		<h5>Rp 350.000,-</h5>
-            		<h5>Tersedia 10 Stok</h5>
-            		<a class="tombol tombol-detail" href="#">Detail</a> 
-            		<a class="tombol tombol-beli" href="#">Beli</a>
-        		</div>
-        		<div class="list-produk">
-            		<img src="img/kayu-jati3.png" alt="Jati Panjang">
-            		<h4>Jati Gelondongan Potong 4m</h4>
-            		<h5>Rp 450.000,-</h5>
-            		<h5>Tersedia 10 Stok</h5>
-            		<a class="tombol tombol-detail" href="#">Detail</a> 
-            		<a class="tombol tombol-beli" href="#">Beli</a>
-        		</div>
-        		<div class="list-produk">
-            		<img src="img/JATI 2.jpg" alt="Jati Panjang">
-            		<h4>Jati Gelondongn 0.2m</h4>
-            		<h5>Rp 170.000,-</h5>
-            		<h5>Tersedia 10 Stok</h5>
-            		<a class="tombol tombol-detail" href="#">Detail</a> 
-            		<a class="tombol tombol-beli" href="#">Beli</a>
-        		</div>
-    		</div>
+        </div>
 
-		</div>
+        <div  id="myModal" class="modal">
+          <div  class="modal-content">
+            <span class="close">&times;</span>
+            <center>
+              <img src="img/jati-bed.jpg" alt="Tempat Tidur Minimalis">
+              <h5>Tempat Tidur Minimalis</h5>
+              <h5>Rp 1.800.000,-</h5>
+              <h5>Sisa 10 Stok</h5>
+              <h5>Ongkos Kirim Rp 50.000,-</h5>
+            </center>
+          </div>
+        </div>
 
-		<div id="footer">
-			&copy; 2019
-			ALIFATUR RIGASARI - EVA WATI
-		</div>
-	</div>
+        <div id="myModal2" class="modal2">
+          <div class="modal-content2">
+            <span class="close2">&times;</span>
+            <center>
+              <h5>Masukkan Jumlah Pembelian</h5>
+              <input type="number" name="" placeholder="jumlah pembelian" required="">
+              <div>
+               <a id="simpan" href="customer-keranjang.html" onclick="alert('berhasil melakukan pembelian')">beli</a>
+              </div>
+             
+            </center>
+          </div>
+        </div>
+          
 
+    </div>
+   
+
+        <div id="footer">
+            KELOMPOK 22 &copy; 2019
+            ALIFATUR RIGASARI (162410101002) & EVA WATI (162410101024)
+        </div>
+    </div>
+  <script type="text/javascript">
+             $('input.search-game').search(function(){
+                    
+                //execute after done typing.
+
+      });
+    </script>
+    <script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("MyBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<script>
+// Get the modal
+var modal2 = document.getElementById("myModal2");
+
+// Get the button that opens the modal
+var btn2 = document.getElementById("Btn");
+
+// Get the <span> element that closes the modal
+var span2 = document.getElementsByClassName("close2")[0];
+
+// When the user clicks the button, open the modal
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+}
+</script>
+        
 </body>
 </html>

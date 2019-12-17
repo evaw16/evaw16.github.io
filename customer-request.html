@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer Request</title>
+	<link rel="stylesheet" type="text/css" href="css/footer&header.css">
+	<link rel="stylesheet" type="text/css" href="css/konten.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+</head>
+<body class="ks">
+	<div id="container">
+		<div id="header">
+			<div class="sub-header">
+               <h1 class="header-judul">Request Funiture</h1>
+            </div>
+		</div>
+
+		<div id="content">
+            <div class="form-box-request">
+                <div class="sosial-icons">
+                    <img src="img/iconcowok.png">
+                </div>
+                <form id="formbox" class="inputdata">
+          			 <input type="text" name="jenis-funiture" placeholder="Judul/ Jenis Funiture" required="" class="input-field">
+                 <input type="text" name="kritik-saran" placeholder="Isi Keterangan Secara Lengkap " required="" class="inputtext1">
+                 <input type="file" name="buktilegal" id="buktilegal" style="display: none" onchange="document.getElementById('filename').value=this.value">
+                 <input type="text" id="filename" class="upload">
+                 <input type="button" value="Upload Bukti Legal" onclick="document.getElementById('buktilegal').click()" class="upload" id="buttonupload">
+                </form>
+                <div class="simpan-batal">
+                 <a id="batal" href="customer.html" onclick="alert('Yakin untuk membatalkan request produk? 100% jati lo')">
+                    Batal
+                 </a>
+                 <a id="simpan" href="">
+                    Simpan
+                 </a>
+                </div>
+          			
+               
+        </div>
+		</div>
+
+		<div id="footer">
+			&copy; 2019
+			ALIFATUR RIGASARI - EVA WATI
+		</div>
+	</div>
+
+</body>
+</html>

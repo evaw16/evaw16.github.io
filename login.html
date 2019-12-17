@@ -1,18 +1,43 @@
+<!DOCTYPE html>
 <html lang="en">
-
+<script>
+        function validasi() {
+  var x = document.forms["form-login"]["username"].value;
+  var y = document.forms["form-login"]["password"].value;
+  if (x == "" && y == "") {
+    alert("Username dan Password Kosong");
+  }else if (x == ""){
+    alert("Username tidak Boleh Kosong");
+  }else if (y == ""){
+    alert("Password tidak Boleh Kosong")
+  }else if (x == "customer"){
+    // alert("Password tidak Boleh Kosong")
+    location.replace("customer.html");
+  }
+  else if (x == "pemasok"){
+    // alert("Password tidak Boleh Kosong")
+    location.replace("pemasok.html");
+  }
+  
+// }else if (x == "pemasok@gmail.com"){
+//     // alert("Password tidak Boleh Kosong")
+//     location.replace("index.html");
+//   }
+  else{
+      return true;
+  }
+  return false;
+}
+    </script>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign In</title>
-    <link rel="stylesheet" href="css/login.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/konten.css">
     <script src="js/login.js"></script>
 </head>
-
-<body>
+<body class="log-in">
     <div class="login">
         <h2 class="login-admin"> <b> MeubelKu-Jati </b></h2>
-        <form class="login-isi" action="customer.html" onSubmit="return validasi()">
+        <form class="login-isi" method="post" name="form-login" action="admin.html" onsubmit="return validasi()">
             <p>
                 <input type="username" name="username" id="username" placeholder="Username">
             </p>
@@ -20,7 +45,7 @@
                 <input type="password" name="password" id="password" placeholder="Password">
             </p>
             <p>
-                <input type="submit" value="Sign In" id="submit" onclick="validasi()"><br>
+                <input type="submit" value="Sign In" id="submit" ><br>
                 <a href="Lupa Password.html">Lupa Password?</a>
             </p>
             <p>
@@ -29,5 +54,4 @@
         </form>
     </div>
 </body>
-
 </html>
